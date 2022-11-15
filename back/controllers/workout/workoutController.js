@@ -29,6 +29,16 @@ export const getWorkout = expressAsyncHandler(async (req, res) => {
 	res.json({ ...workout, minutes })
 })
 
+//@desc 	Get workouts
+//@route  GET /api/workouts
+//@access Private
+
+export const getWorkouts = expressAsyncHandler(async (req, res) => {
+	const workouts = await Workout.find({}).populate('exercises')
+
+	res.json(workouts)
+})
+
 //@desc 	Get workout
 //@route  PUT /api/workouts/:id
 //@access Private
