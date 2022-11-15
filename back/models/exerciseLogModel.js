@@ -6,10 +6,9 @@ const exerciseLogModel = mongoose.Schema(
 	{
 		name: {
 			type: ObjectId,
-			ref: 'user',
+			ref: 'User',
 			requires: true,
 		},
-		workout: { type: ObjectId, ref: 'Workout', required: true },
 		exercise: { type: ObjectId, ref: 'Exercise', required: true },
 		completed: { type: Boolean, default: false },
 		times: [
