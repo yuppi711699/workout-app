@@ -1,1 +1,8 @@
 @import '../../../scss/variables.scss'; // .hea
+
+.home-wrapper {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../../../images/home-bg.jpg');
+}
